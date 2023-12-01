@@ -15,6 +15,7 @@ const ProdutoDetalhe: React.FC = () => {
 
                 if (produtoSelecionado) {
                     setProduto({
+                        produtoId: produto?.produtoId!,
                         imagemSrc: produtoSelecionado.imageUrl,
                         titulo: produtoSelecionado.name,
                         preco: parseFloat(produtoSelecionado.price),

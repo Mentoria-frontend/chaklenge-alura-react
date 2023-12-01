@@ -13,11 +13,13 @@ const ListaProduto: React.FC = () => {
                 console.error("Erro ao buscar a lista de produtos", erro)
             }
         }
-    })
+        fetchProdutos()
+    }, [])
     return (
         <div className="lista-produto">
             {produtos.map((produto: any) => (
                 <Produto
+                    produtoId={produto.id}
                     key={produto.id} 
                     imagemSrc={produto.imageUrl} 
                     titulo={produto.name} 
